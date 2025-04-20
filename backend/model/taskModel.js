@@ -88,7 +88,7 @@ const Task = {
       .input('email', sql.VarChar, email)
       .input('password_hash', sql.VarChar, password_hash)
       .execute('ValidateUserLogin'); 
-      return result.recordset; // Return the result of the stored procedure
+      return result.recordset; 
   }
   catch (error) {
     console.error("Error executing stored procedure:", error);
@@ -103,7 +103,7 @@ const Task = {
     .input('contact_info', sql.VarChar, contact_Info)
     .input('address', sql.VarChar, address)
     .execute('UpdateUserProfile'); 
-    return {success: true, message: 'User profile updated successfully'}; // Return the result of the stored procedure
+    return {success: true, message: 'User profile updated successfully'}; 
   }
   catch (error) {
     console.error("Error executing stored procedure:", error);
